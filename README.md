@@ -1,0 +1,2 @@
+# checking_snap_travis_install
+checking_snap_travis
