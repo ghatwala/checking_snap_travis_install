@@ -1,0 +1,29 @@
+
+addons:
+  snaps:
+    - name: snapcraft
+      confinement: classic
+      channel: stable
+jobs:
+  include:
+    - arch: amd64
+      dist: bionic
+    - arch: amd64
+      dist: xenial
+    - arch: arm64
+      dist: xenial
+    - arch: arm64
+      dist: bionic
+    - arch: ppc64le
+      dist: bionic
+    - arch: ppc64le
+      dist: xenial  
+    - arch: s390x
+      dist: xenial 
+    - arch: s390x
+      dist: bionic 
+      
+install:
+  - sudo apt-get remove -y --purge lxd lxd-client
+  - sudo snap install lxd
+  - snap list
